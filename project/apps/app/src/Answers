@@ -8,3 +8,23 @@ Ans: less error prone, testing can be done easily, predictability and easy to de
 
 6: How can you verify the action has been dispatched?
 Ans: using Redux dev tools and middleware.
+
+
+
+Question 7: explain the use of useEffect hook in React
+Ans: useEffect helps to perform sideEffects like api calling, calculations, Dom manipulation etc.
+
+Question 8: What is A High Order Component
+Ans: It is a function that accepts a component and returns a new component
+
+Question 9: What use cases would a HOC be usefull?
+Ans: Hoc can be useful in conditional rendering, Adding a fallback UI,Authentication etc..
+
+Question 10: What does it indicate when a component is prefixed with use and with
+Ans: 'Use' indicates a Hook. "with" indicates HOC.
+
+Question 11: What is a Generic type in typescript?
+Ans: Generic types is a place holder that allows as to work with any type, while maintaining type safety
+
+Question 12: What is the difference between a controlled and uncontrolled input in React?
+Ans: In controlled Input the inputs values is controlled by React state, where as in uncontrolled input the inputs values is controlled by Dom.
