@@ -4,3 +4,7 @@ Ans:  createSlice automatically generates actions and types, Actions, reducers, 
 
 Question 5: Describe the benefits of immutable code.
 Ans: less error prone, testing can be done easily, predictability and easy to debug, maintainable
+
+
+6: How can you verify the action has been dispatched?
+Ans: using Redux dev tools and middleware.

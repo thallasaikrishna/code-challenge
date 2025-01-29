@@ -23,7 +23,7 @@ useEffect(()=>{
   dispatch(fetchPokemonList(api))
 },[dispatch])
 
-
+if(loading) return <p>Loading...</p>
   return (
     <>
       <h1>Pokemon list:</h1>

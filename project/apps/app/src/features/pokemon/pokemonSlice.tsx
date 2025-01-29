@@ -30,6 +30,9 @@ export const pokemonSlice=createSlice({
     name:"pokemon",
     initialState,
     reducers:{
+        deletePokemon:(state,action)=>{
+            state.pokemonList=state.pokemonList.filter((pokemon:Pokemon)=>pokemon.name!==action.payload);
+        }
     },
     extraReducers:(builder)=> {
         builder.addCase(fetchPokemonList.pending,(state)=>{
@@ -48,4 +51,5 @@ export const pokemonSlice=createSlice({
 })
 
 
+export const {deletePokemon} = pokemonSlice.actions
 export default pokemonSlice.reducer;
