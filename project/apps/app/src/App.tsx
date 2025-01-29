@@ -15,7 +15,7 @@ const [data, error, isLoading] = useFetch(api)
   return (
     <>
       <h1>Pokemon list:</h1>
-      <List />
+     { Array.isArray(data) && data.length ? <List data = {data}/> : null}
     </>
   )
 }
