@@ -1,0 +1,6 @@
+Question 4: What makes the createSlice in redux-toolkit difference then A Reducer in redux?
+Ans:  createSlice automatically generates actions and types, Actions, reducers, and types are bundled together, less repetitive
+ in redux need to generate generates actions and types ,Actions, creators, and reducers are often in separate files, more repetitive.
+
+Question 5: Describe the benefits of immutable code.
+Ans: less error prone, testing can be done easily, predictability and easy to debug, maintainable

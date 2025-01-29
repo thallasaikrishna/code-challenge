@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
+import { useDispatch,useSelector } from 'react-redux'
 import useFetch from './hooks/useFetch'
+import {fetchPokemonList} from './features/pokemon/pokemonSlice'
 import { List } from 'ui'
 
 const api = "https://pokeapi.co/api/v2/pokemon?limit=151"
@@ -10,12 +12,22 @@ const api = "https://pokeapi.co/api/v2/pokemon?limit=151"
 // Ans: I would like to add tanstack query to make api calling more simplified
 
 const App = () => {
-const [data, error, isLoading] = useFetch(api)
+  const dispatch = useDispatch()
+const [data, e, isLoading] = useFetch(api)
+
+const { pokemonList, loading, error } = useSelector((state) => state);
+
+console.log(loading,pokemonList)
+
+useEffect(()=>{
+  dispatch(fetchPokemonList(api))
+},[dispatch])
+
 
   return (
     <>
       <h1>Pokemon list:</h1>
-     { Array.isArray(data) && data.length ? <List data = {data}/> : null}
+     { Array.isArray(pokemonList) && pokemonList.length ? <List data = {pokemonList}/> : null}
     </>
   )
 }
